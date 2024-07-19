@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for Feowna</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        h1 {
+            color: #ff69b4;
+            animation: fadeIn 2s ease-in-out;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.5s ease-in-out forwards;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hidden-message {
+            display: none;
+        }
+        .visible-message {
+            display: block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .quote {
+            font-style: italic;
+            margin-top: 10px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            margin: 5px;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Message for Feowna</h1>
+    <section>
+        <h2>About How I Love You</h2>
+        <p id="message1" class="hidden-message">Feowna, you are the love of my life. Every moment with you is a treasure, and I cherish every second we spend together. My love for you grows stronger every day.</p>
+        <button onclick="revealMessage('message1')">Reveal</button>
+    </section>
+    <section>
+        <h2>Always Here for You</h2>
+        <p id="message2" class="hidden-message">No matter what happens, know that I am always here for you. I am your biggest supporter, and I am rooting for you in every way possible. Your dreams are my dreams, and your happiness is my happiness.</p>
+        <button onclick="revealMessage('message2')">Reveal</button>
+    </section>
+    <section>
+        <h2>Forever Thankful</h2>
+        <p id="message3" class="hidden-message">I will love you forever, Feowna. Thank you for being the most wonderful person in my life. I am so grateful to have you by my side, and I look forward to a lifetime of love and happiness together.</p>
+        <button onclick="revealMessage('message3')">Reveal</button>
+    </section>
+
+    <section class="gallery">
+        <h2>Our Moments Together</h2>
+        <img src="path/to/your/image1.jpg" alt="">
+        <img src="path/to/your/image2.jpg" alt="">
+        <img src="path/to/your/image3.jpg" alt="">
+        <img src="path/to/your/image4.jpg" alt="">
+        <img src="path/to/your/image5.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Quotes</h2>
+        <p class="quote">"Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day."</p>
+        <p class="quote">"In your smile, I see something more beautiful than the stars."</p>
+    </section>
+
+    <script>
+        function revealMessage(id) {
+            var message = document.getElementById(id);
+            message.classList.remove('hidden-message');
+            message.classList.add('visible-message');
+        }
+    </script>
+</body>
+</html>
